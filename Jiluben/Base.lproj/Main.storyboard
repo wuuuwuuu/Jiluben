@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="D6x-78-yed">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="7P0-7a-Vbi">
+            <objects>
+                <navigationController id="D6x-78-yed" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MOr-Ld-HDW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="bAE-lD-z2V"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mud-sw-AIG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-441" y="889"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="LAl-d2-tsu">
+                                <rect key="frame" x="254" y="118" width="92" height="30"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0lq-Jv-laQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnk-Zo-0bg">
+                                                <rect key="frame" x="0.0" y="0.0" width="92" height="30"/>
+                                                <color key="backgroundColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Add template"/>
+                                                <connections>
+                                                    <segue destination="nrf-cz-7xq" kind="show" id="DJf-tn-MCr"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vnk-Zo-0bg" firstAttribute="top" secondItem="0lq-Jv-laQ" secondAttribute="top" constant="20" id="621-7h-VpI"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="621-7h-VpI"/>
+                                            </mask>
+                                        </variation>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMk-Fr-6KZ">
+                                <rect key="frame" x="144" y="192" width="103" height="64"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="Lof-ld-nZv"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrh-v3-kmA">
+                                <rect key="frame" x="367" y="192" width="103" height="64"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="7RD-wn-c17"/>
+                                    <constraint firstAttribute="height" constant="64" id="Zmq-ym-YZw"/>
+                                    <constraint firstAttribute="width" constant="103" id="d9m-sZ-xr6"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="103" id="f1G-SB-jyo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mrh-v3-kmA" firstAttribute="baseline" secondItem="CMk-Fr-6KZ" secondAttribute="firstBaseline" id="2n6-vG-nF3"/>
+                            <constraint firstItem="CMk-Fr-6KZ" firstAttribute="leading" secondItem="Mrh-v3-kmA" secondAttribute="trailing" constant="43" id="AZr-rC-aOA"/>
+                            <constraint firstItem="CMk-Fr-6KZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-104.5" id="AiM-XK-kYJ"/>
+                            <constraint firstItem="Mrh-v3-kmA" firstAttribute="firstBaseline" secondItem="CMk-Fr-6KZ" secondAttribute="baseline" id="HaP-zf-vaa"/>
+                            <constraint firstItem="Mrh-v3-kmA" firstAttribute="top" secondItem="CMk-Fr-6KZ" secondAttribute="top" id="Pka-ML-K1E"/>
+                            <constraint firstItem="Mrh-v3-kmA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="118.5" id="crt-IE-aDw"/>
+                            <constraint firstItem="Mrh-v3-kmA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="128" id="ghM-YE-hW6"/>
+                            <constraint firstItem="CMk-Fr-6KZ" firstAttribute="leading" secondItem="Mrh-v3-kmA" secondAttribute="trailing" constant="43" id="jhL-Br-Rv4"/>
+                            <constraint firstItem="CMk-Fr-6KZ" firstAttribute="leading" secondItem="Mrh-v3-kmA" secondAttribute="trailing" constant="20" id="vUp-co-dyz"/>
+                            <constraint firstItem="Mrh-v3-kmA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="31" id="wBM-ig-PkD"/>
+                            <constraint firstItem="LAl-d2-tsu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="wgy-D7-ojy"/>
+                            <constraint firstItem="LAl-d2-tsu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whp-UB-sK4"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AZr-rC-aOA"/>
+                                <exclude reference="jhL-Br-Rv4"/>
+                                <exclude reference="vUp-co-dyz"/>
+                                <exclude reference="wBM-ig-PkD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="2Dd-x3-d99"/>
+                    <connections>
+                        <outletCollection property="templateButtons" destination="CMk-Fr-6KZ" id="mEt-Dh-dCW"/>
+                        <outletCollection property="templateButtons" destination="Mrh-v3-kmA" id="XsN-6U-DxO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="889"/>
+        </scene>
+        <!--Add Template View Controller-->
+        <scene sceneID="P2R-bi-WfB">
+            <objects>
+                <viewController id="nrf-cz-7xq" customClass="JLAddTemplateViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zth-zh-pLM"/>
+                        <viewControllerLayoutGuide type="bottom" id="3HE-oD-gew"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Fdr-ew-MVr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JS7-xN-sAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="889"/>
+        </scene>
+    </scenes>
+</document>
