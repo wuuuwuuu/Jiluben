@@ -24,6 +24,8 @@
 		8A55D8331C4B166A00E5EF33 /* JTField.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A55D8321C4B166A00E5EF33 /* JTField.m */; };
 		8A55D8351C4D91CA00E5EF33 /* MultiColumnTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A55D8341C4D91CA00E5EF33 /* MultiColumnTableCell.m */; };
 		8A55D8391C4D9E6900E5EF33 /* UIImage+JLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A55D8381C4D9E6900E5EF33 /* UIImage+JLUtil.m */; };
+		8AE27B291CB0825D001E48CF /* JLAddColumnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE27B281CB0825D001E48CF /* JLAddColumnViewController.m */; };
+		8AE27B2C1CB085CA001E48CF /* JLColumnTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE27B2B1CB085CA001E48CF /* JLColumnTypeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,10 @@
 		8A55D8361C4D96DA00E5EF33 /* MultiColumnTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiColumnTableCell.h; sourceTree = "<group>"; };
 		8A55D8371C4D9E5500E5EF33 /* UIImage+JLUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JLUtil.h"; sourceTree = "<group>"; };
 		8A55D8381C4D9E6900E5EF33 /* UIImage+JLUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JLUtil.m"; sourceTree = "<group>"; };
+		8AE27B271CB08242001E48CF /* JLAddColumnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAddColumnViewController.h; sourceTree = "<group>"; };
+		8AE27B281CB0825D001E48CF /* JLAddColumnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAddColumnViewController.m; sourceTree = "<group>"; };
+		8AE27B2A1CB085BF001E48CF /* JLColumnTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLColumnTypeViewController.h; sourceTree = "<group>"; };
+		8AE27B2B1CB085CA001E48CF /* JLColumnTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLColumnTypeViewController.m; sourceTree = "<group>"; };
 		BF92D1F5A08A61E0A43AFF84 /* libPods-Jiluben.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jiluben.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4289B660F6F6C4CF3E7EE57 /* Pods-Jiluben.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jiluben.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jiluben/Pods-Jiluben.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +152,10 @@
 				8A55D8271C2B42F400E5EF33 /* JLTemplate.h */,
 				8A55D8281C2B430900E5EF33 /* JLAddTemplateViewController.m */,
 				8A55D82A1C2B431800E5EF33 /* JLAddTemplateViewController.h */,
+				8AE27B271CB08242001E48CF /* JLAddColumnViewController.h */,
+				8AE27B281CB0825D001E48CF /* JLAddColumnViewController.m */,
+				8AE27B2A1CB085BF001E48CF /* JLColumnTypeViewController.h */,
+				8AE27B2B1CB085CA001E48CF /* JLColumnTypeViewController.m */,
 			);
 			name = Template;
 			sourceTree = "<group>";
@@ -290,6 +300,7 @@
 			files = (
 				8A55D8131C2A817B00E5EF33 /* ViewController.m in Sources */,
 				8A0877201C7272E500EE3C14 /* JLAddNewRecordViewController.m in Sources */,
+				8AE27B291CB0825D001E48CF /* JLAddColumnViewController.m in Sources */,
 				8A55D8391C4D9E6900E5EF33 /* UIImage+JLUtil.m in Sources */,
 				8A55D8191C2A817B00E5EF33 /* Jiluben.xcdatamodeld in Sources */,
 				8A0877221C72789300EE3C14 /* JLStyledInputViewCell.m in Sources */,
@@ -299,6 +310,7 @@
 				8A0877271C727DAE00EE3C14 /* JLCons.m in Sources */,
 				8A55D8351C4D91CA00E5EF33 /* MultiColumnTableCell.m in Sources */,
 				8A55D8291C2B430900E5EF33 /* JLAddTemplateViewController.m in Sources */,
+				8AE27B2C1CB085CA001E48CF /* JLColumnTypeViewController.m in Sources */,
 				8A55D82F1C2B691500E5EF33 /* ParseObject.m in Sources */,
 				8A55D8331C4B166A00E5EF33 /* JTField.m in Sources */,
 				8A55D80D1C2A817B00E5EF33 /* main.m in Sources */,

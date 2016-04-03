@@ -32,7 +32,7 @@
                                                            ceilf(JLStyledTextFieldCell.fontForLabel.lineHeight))]; //ceilf(JLStyledTextFieldCell.fontForLabel.lineHeight)
     [self.label setFont:JLStyledTextFieldCell.fontForLabel];
     [self.label setTextColor:[JLCons META_COLOR]];
-    [self.label setBackgroundColor:[UIColor redColor]];//[UIColor clearColor]
+    [self.label setBackgroundColor:[UIColor clearColor]]; //[UIColor redColor]];//
     [self.label setAutoresizingMask:UIViewAutoresizingFlexibleBottomMargin];
     [self.label setNumberOfLines:1];
     [self.contentView addSubview:self.label];
@@ -41,7 +41,7 @@
                                                                self.label.bounds.size.height,
                                                                self.contentView.bounds.size.width,
                                                                self.contentView.bounds.size.height - self.label.bounds.size.height)];
-    [self.viewHolder setBackgroundColor:[UIColor blueColor]];
+    [self.viewHolder setBackgroundColor:[UIColor clearColor]];
     [self.viewHolder setAutoresizingMask: UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight];
     [self.contentView addSubview:self.viewHolder];
     
@@ -66,7 +66,7 @@
     self.textField.clearButtonMode = UITextFieldViewModeWhileEditing;
     self.textField.clipsToBounds = NO;
     self.textField.borderStyle = UITextBorderStyleNone;
-     self.textField.backgroundColor = [UIColor yellowColor];
+     self.textField.backgroundColor = [UIColor clearColor];
     [self.viewHolder addSubview:self.textField];
     [self addLabelledView:self.textField];
 }

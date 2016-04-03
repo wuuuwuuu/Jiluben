@@ -13,8 +13,9 @@
 #import <Parse/Parse.h>
 #import "JLStyledInputViewCell.h"
 #import "JLTableView.h"
+#import "JLAddColumnViewController.h"
 
-@interface JLAddTemplateViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, MultiColumnTableCellDelegate>
+@interface JLAddTemplateViewController () <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource, JLAddColumnViewControllerDelegate>
 //@property (weak, nonatomic) IBOutlet UITextField *templateName;
 //- (IBAction)addTemplateToServer:(UIButton *)sender;
 //@property (weak, nonatomic) IBOutlet UITableView *fieldTable;
@@ -34,7 +35,7 @@
 @implementation JLAddTemplateViewController
 
 typedef enum {
-    TableRowTitleSection,
+    TableRowTitleSection = 0,
     TableRowColumnsSection,
     TableRowAddColumnSection,
     UNKNOWN_Table_ROWSection
@@ -50,24 +51,11 @@ typedef enum {
 
     [super viewDidLoad];
 
-    // Template name text field.
-//    self.isDefaultName = YES;
-//    [self.templateName setReturnKeyType:UIReturnKeyDone];
-//    [self.templateName addTarget:self action:@selector(fieldNameTextFieldActive) forControlEvents:UIControlEventEditingDidBegin];
-//    self.templateName.delegate = self;
-
+    // Navigation button.
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addColumnToTemplate)];
+    
     // Field table view.
     [self loadTableView];
-    //self.viewContainer.bounds
-//    self.table = [[UITableView alloc] initWithFrame:CGRectMake(self.viewContainer.frame.origin.x,self.viewContainer.frame.origin.y,self.viewContainer.frame.size.width,self.viewContainer.frame.size.height) style:UITableViewStylePlain];
-//    self.fieldTable.delegate = self;
-//    self.fieldTable.dataSource = self;
-//    [self.view addSubview:self.table];
-
-    // Build view.
-    
-//    [self.templateName addTarget:delegate action:@selector(textField1Active:) forControlEvents:UIControlEventEditingDidBegin];
-    // Do any additional setup after loading the view, typically from a nib.
     
     // Init a new template.
     self.template = [[JLTemplate alloc] init];
@@ -80,6 +68,7 @@ typedef enum {
 
 - (void)loadTableView
 {
+    // Add table to view.
     self.tableView = [[JLTableView alloc] initWithFrame:self.view.bounds];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -93,7 +82,7 @@ typedef enum {
     [self.titleView.textField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     
     // Column view.
-//    self.tableColumnData = [[NSMutableArray alloc] init];
+    self.tableColumnData = [[NSMutableArray alloc] init];
     //JTField *field = [[JTField alloc] init];
 //    [self.tableColumnData addObject:@"Add Column"];
 
@@ -145,34 +134,7 @@ typedef enum {
     }];
 }
 
-//- (IBAction)addTemplateToServer:(UIButton *)sender {
-//    // Send to Parse.
-//    
-//    PFObject *parseTemplate = [PFObject objectWithClassName:@"JLTemplate"];
-//    parseTemplate[@"name"] = @"test template";
-//    parseTemplate[@"fields"] = @[@"f1", @"f2"];
-//    
-//    PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
-//    testObject[@"foo"] = @"bar";
-//    [testObject saveInBackground];
-//    
-//    [parseTemplate saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {
-//        if (succeeded) {
-//            NSLog(@"success.");
-//        } else {
-//            NSLog(@"error");
-//        }
-//    }];
-//}
-
 #pragma mark UITableViewDataSource
-//- (TableLogicalRow)indexPath2TableRow:(NSIndexPath*)indexPath
-//{
-//    if (indexPath.section == 0) { return TableRowTitle; }
-//    if (indexPath.section == 1) { return TableRowColumns; }
-//    return UNKNOWN_Table_ROW;
-//}
-
 - (CGFloat)tableView:(UITableView*)tableView heightForHeaderInSection:(NSInteger)section
 {
     if (0 == section) {      return 20.0f; }
@@ -183,84 +145,59 @@ typedef enum {
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView*)tableView
 {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section
 {
     if (0 == section) { return 1; }
-    if (1 == section) { return 1; }
-    return TableSectionOtherNumRows;
+    if (1 == section) { return [self.tableColumnData count]; }
+    if (2 == section) { return 1; }
+    return 0;
 }
 
 - (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath*)indexPath
 {
-    TableLogicalRow logicalRow = [self indexPath2TableRow:indexPath];
-    if (TableRowTitle == logicalRow) {
+    NSInteger logicalRow = indexPath.section;
+    // Show of title.
+    if (0 == logicalRow) {
         return self.titleView;
     }
 
-    if (logicalRow == TableRowColumns) {
+    if (logicalRow == 1) {
         static NSString* CellIdentifier = @"ReusableJLTemplateColumnCell";
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-            cell.textLabel.text = [self.tableColumnData objectAtIndex:indexPath.row];
+            NSDictionary *cellData = [self.tableColumnData objectAtIndex:indexPath.row];
+            cell.textLabel.text = [NSString stringWithFormat:@"Name: %@   Type:%@", [cellData objectForKey:@"title"], [cellData objectForKey:@"type"]];
         }
         //    cell.delegate = self;
         return cell;
     }
     
+    // View of add column.
+    if (2 == logicalRow) {
+        return self.addColumnView;
+    }
+
     return nil;
 }
 
-//#pragma mark MultiColumnTableCellDelegate
-//- (void)cellDidTapOnAddRow:(UITableViewCell *)cell
-//{
-//    NSLog(@"click on cell");
-//    NSString *name = [(MultiColumnTableCell *)cell getNameText];
-//    NSString *type = [(MultiColumnTableCell *)cell getTypeText];
-//    JTField *fieldFromColumn = [[JTField alloc] initWithName:name withType:type];
-//    if([self.template addField:fieldFromColumn]) {
-//        // add new empty column.
-//        [self.view endEditing:YES];
-//        [self.tableData addObject:fieldFromColumn];
-//        [self.tableView reloadData];
-//    } else {
-//        NSLog(@"dup name");
-//    }
-//}
-//
-//- (void)cellDidTapOnDeleteRow:(UITableViewCell *)cell
-//{
-//    NSLog(@"click to delete row cell");
-//    
-//    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
-//    
-//    if([self.template removeField:[(MultiColumnTableCell *)cell getNameText]]) {
-//        [self.tableView beginUpdates];
-////        [self.tableData removeObjectAtIndex:row];
-//        for (JTField *field in self.tableData) {
-//            if ([[(MultiColumnTableCell *)cell getNameText] isEqualToString:field.name]) {
-//                [self.tableData removeObject:field];
-//                [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationLeft];
-//                break;
-//            }
-//        }
-////        [self.fieldTable reloadData];
-//        [self.tableView endUpdates];
-//    }
-//}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger logicalRow = indexPath.section;
+    
+    if (2 == logicalRow) {
+        NSLog(@"Add column ba");
+        JLAddColumnViewController *vc = [[JLAddColumnViewController alloc] init];
+        vc.delegate = self;
+        [self.navigationController pushViewController:vc animated:YES];
+//        [self.navigationController presentViewController:vc animated:YES completion:nil];
+    }
+}
 
 #pragma mark TextField on tap, allow editing and return.
-//- (void)fieldNameTextFieldActive
-//{
-//    if (self.isDefaultName) {
-//        self.templateName.text = nil;
-//        self.isDefaultName = NO;
-//    }
-//}
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
@@ -270,6 +207,15 @@ typedef enum {
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     return YES;
+}
+
+#pragma mark JLAddColumnViewControllerDelegate
+- (void)didAddColumnTitle:(NSString *)title withType:(NSString *)type
+{
+    NSLog(@"set title: %@ and type: %@", title, type);
+    // Update TableRowColumnsSection.
+    [self.tableColumnData addObject:@{@"title":title, @"type":type}];
+    [self.tableView reloadData];
 }
 
 @end
