@@ -52,7 +52,8 @@ typedef enum {
     [super viewDidLoad];
 
     // Navigation button.
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addColumnToTemplate)];
+    self.navigationItem.title = @"New Template";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addNewTemplateToServer)];
     
     // Field table view.
     [self loadTableView];
@@ -105,23 +106,24 @@ typedef enum {
 //    [self.template addField:fieldFromColumn];
 //}
 
+
 /**
  * Post template to parse.
  */
-- (void)addTemplateToServer:(UIButton *)sender
+- (void)addNewTemplateToServer
 {
     NSLog(@"Add template to server");
     // new template name.
 //    self.template.name = [self.templateName text];
     
     PFObject *parseTemplate = [PFObject objectWithClassName:@"JLTemplate"];
-    parseTemplate[@"name"] = self.template.name;
+    parseTemplate[@"name"] = self.titleView.textField.text;// self.template.name;
     
-    NSMutableArray *parseFields = [[NSMutableArray alloc] init];
-    NSMutableArray *array = self.template.fields;
-    for (JTField *field in array) {
-        [parseFields addObject:[field stringifyField]];
-    }
+    NSMutableArray *parseFields = self.tableColumnData;//[[NSMutableArray alloc] init];
+//    NSMutableArray *array = self.template.fields;
+//    for (JTField *field in array) {
+//        [parseFields addObject:[field stringifyField]];
+//    }
     parseTemplate[@"fields"] = parseFields;
     
     [parseTemplate saveInBackgroundWithBlock:^(BOOL succeeded, NSError * _Nullable error) {

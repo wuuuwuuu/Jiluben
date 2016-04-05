@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#import "JLStartingViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,6 +22,10 @@
     
     [Parse setApplicationId:@"0Tr8KIjorpRHjZ02cnc1xl8IxFUj6PFDIe7g2IRg"
                   clientKey:@"zEfM4H1XmrOeXtldkzKGYtFzfJhjdejZvuVEkMYy"];
+    
+    // Starting point. Root view controller.
+    JLStartingViewController *rootVC = [[JLStartingViewController alloc] init];
+    self.window.rootViewController = rootVC;
     
     return YES;
 }

@@ -26,6 +26,7 @@
 		8A55D8391C4D9E6900E5EF33 /* UIImage+JLUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A55D8381C4D9E6900E5EF33 /* UIImage+JLUtil.m */; };
 		8AE27B291CB0825D001E48CF /* JLAddColumnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE27B281CB0825D001E48CF /* JLAddColumnViewController.m */; };
 		8AE27B2C1CB085CA001E48CF /* JLColumnTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE27B2B1CB085CA001E48CF /* JLColumnTypeViewController.m */; };
+		C008DF361CB41ECC006CBE73 /* JLStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF351CB41ECC006CBE73 /* JLStartingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,8 @@
 		8AE27B2A1CB085BF001E48CF /* JLColumnTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLColumnTypeViewController.h; sourceTree = "<group>"; };
 		8AE27B2B1CB085CA001E48CF /* JLColumnTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLColumnTypeViewController.m; sourceTree = "<group>"; };
 		BF92D1F5A08A61E0A43AFF84 /* libPods-Jiluben.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jiluben.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C008DF341CB41E9A006CBE73 /* JLStartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLStartingViewController.h; sourceTree = "<group>"; };
+		C008DF351CB41ECC006CBE73 /* JLStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLStartingViewController.m; sourceTree = "<group>"; };
 		F4289B660F6F6C4CF3E7EE57 /* Pods-Jiluben.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jiluben.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jiluben/Pods-Jiluben.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,6 +136,8 @@
 				8A55D8381C4D9E6900E5EF33 /* UIImage+JLUtil.m */,
 				8A08771F1C7272E500EE3C14 /* JLAddNewRecordViewController.m */,
 				8A0877241C7278AF00EE3C14 /* commonUI */,
+				C008DF341CB41E9A006CBE73 /* JLStartingViewController.h */,
+				C008DF351CB41ECC006CBE73 /* JLStartingViewController.m */,
 			);
 			path = Jiluben;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				8AE27B291CB0825D001E48CF /* JLAddColumnViewController.m in Sources */,
 				8A55D8391C4D9E6900E5EF33 /* UIImage+JLUtil.m in Sources */,
 				8A55D8191C2A817B00E5EF33 /* Jiluben.xcdatamodeld in Sources */,
+				C008DF361CB41ECC006CBE73 /* JLStartingViewController.m in Sources */,
 				8A0877221C72789300EE3C14 /* JLStyledInputViewCell.m in Sources */,
 				8A55D8101C2A817B00E5EF33 /* AppDelegate.m in Sources */,
 				8A55D8261C2B42E300E5EF33 /* JLTemplate.m in Sources */,

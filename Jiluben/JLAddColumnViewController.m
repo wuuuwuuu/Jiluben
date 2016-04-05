@@ -30,6 +30,7 @@
     [super viewDidLoad];
     
     // navigation button.
+    self.navigationItem.title = @"New Column";
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add" style:UIBarButtonItemStylePlain target:self action:@selector(addColumnToTemplate)];
     // Add table view.
     self.tableView = [[JLTableView alloc] initWithFrame:self.view.bounds];
