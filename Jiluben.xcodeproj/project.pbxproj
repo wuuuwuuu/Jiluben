@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		769EE58F33EF9709E0C30CE2 /* libPods-Jiluben.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BF92D1F5A08A61E0A43AFF84 /* libPods-Jiluben.a */; };
-		8A0877201C7272E500EE3C14 /* JLAddNewRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A08771F1C7272E500EE3C14 /* JLAddNewRecordViewController.m */; };
 		8A0877221C72789300EE3C14 /* JLStyledInputViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0877211C72789300EE3C14 /* JLStyledInputViewCell.m */; };
 		8A0877271C727DAE00EE3C14 /* JLCons.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0877261C727DAE00EE3C14 /* JLCons.m */; };
 		8A0877291C72A17200EE3C14 /* JLTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A0877281C72A17200EE3C14 /* JLTableView.m */; };
@@ -27,11 +26,12 @@
 		8AE27B291CB0825D001E48CF /* JLAddColumnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE27B281CB0825D001E48CF /* JLAddColumnViewController.m */; };
 		8AE27B2C1CB085CA001E48CF /* JLColumnTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AE27B2B1CB085CA001E48CF /* JLColumnTypeViewController.m */; };
 		C008DF361CB41ECC006CBE73 /* JLStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF351CB41ECC006CBE73 /* JLStartingViewController.m */; };
+		C008DF381CB616A2006CBE73 /* PVTemplateDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF371CB616A2006CBE73 /* PVTemplateDetailViewController.m */; };
+		C008DF441CB9CAF6006CBE73 /* JLAddRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF431CB9CAF6006CBE73 /* JLAddRecordViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		366C00916A358DEDF396D0FA /* Pods-Jiluben.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jiluben.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jiluben/Pods-Jiluben.release.xcconfig"; sourceTree = "<group>"; };
-		8A08771F1C7272E500EE3C14 /* JLAddNewRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAddNewRecordViewController.m; sourceTree = "<group>"; };
 		8A0877211C72789300EE3C14 /* JLStyledInputViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLStyledInputViewCell.m; sourceTree = "<group>"; };
 		8A0877231C7278A700EE3C14 /* JLStyledInputViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLStyledInputViewCell.h; sourceTree = "<group>"; };
 		8A0877251C727DA300EE3C14 /* JLCons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLCons.h; sourceTree = "<group>"; };
@@ -67,6 +67,10 @@
 		BF92D1F5A08A61E0A43AFF84 /* libPods-Jiluben.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Jiluben.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C008DF341CB41E9A006CBE73 /* JLStartingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLStartingViewController.h; sourceTree = "<group>"; };
 		C008DF351CB41ECC006CBE73 /* JLStartingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLStartingViewController.m; sourceTree = "<group>"; };
+		C008DF371CB616A2006CBE73 /* PVTemplateDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PVTemplateDetailViewController.m; sourceTree = "<group>"; };
+		C008DF391CB616B8006CBE73 /* PVTemplateDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVTemplateDetailViewController.h; sourceTree = "<group>"; };
+		C008DF421CB9CAD2006CBE73 /* JLAddRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAddRecordViewController.h; sourceTree = "<group>"; };
+		C008DF431CB9CAF6006CBE73 /* JLAddRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAddRecordViewController.m; sourceTree = "<group>"; };
 		F4289B660F6F6C4CF3E7EE57 /* Pods-Jiluben.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jiluben.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jiluben/Pods-Jiluben.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +89,8 @@
 		8A0877241C7278AF00EE3C14 /* commonUI */ = {
 			isa = PBXGroup;
 			children = (
+				8A55D8381C4D9E6900E5EF33 /* UIImage+JLUtil.m */,
+				8A55D8371C4D9E5500E5EF33 /* UIImage+JLUtil.h */,
 				8A08772A1C72A17F00EE3C14 /* JLTableView.h */,
 				8A0877281C72A17200EE3C14 /* JLTableView.m */,
 				8A0877231C7278A700EE3C14 /* JLStyledInputViewCell.h */,
@@ -132,12 +138,10 @@
 				8A55D8321C4B166A00E5EF33 /* JTField.m */,
 				8A55D8341C4D91CA00E5EF33 /* MultiColumnTableCell.m */,
 				8A55D8361C4D96DA00E5EF33 /* MultiColumnTableCell.h */,
-				8A55D8371C4D9E5500E5EF33 /* UIImage+JLUtil.h */,
-				8A55D8381C4D9E6900E5EF33 /* UIImage+JLUtil.m */,
-				8A08771F1C7272E500EE3C14 /* JLAddNewRecordViewController.m */,
 				8A0877241C7278AF00EE3C14 /* commonUI */,
 				C008DF341CB41E9A006CBE73 /* JLStartingViewController.h */,
 				C008DF351CB41ECC006CBE73 /* JLStartingViewController.m */,
+				C008DF451CB9CB01006CBE73 /* Record */,
 			);
 			path = Jiluben;
 			sourceTree = "<group>";
@@ -161,6 +165,8 @@
 				8AE27B281CB0825D001E48CF /* JLAddColumnViewController.m */,
 				8AE27B2A1CB085BF001E48CF /* JLColumnTypeViewController.h */,
 				8AE27B2B1CB085CA001E48CF /* JLColumnTypeViewController.m */,
+				C008DF371CB616A2006CBE73 /* PVTemplateDetailViewController.m */,
+				C008DF391CB616B8006CBE73 /* PVTemplateDetailViewController.h */,
 			);
 			name = Template;
 			sourceTree = "<group>";
@@ -171,6 +177,15 @@
 				BF92D1F5A08A61E0A43AFF84 /* libPods-Jiluben.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C008DF451CB9CB01006CBE73 /* Record */ = {
+			isa = PBXGroup;
+			children = (
+				C008DF421CB9CAD2006CBE73 /* JLAddRecordViewController.h */,
+				C008DF431CB9CAF6006CBE73 /* JLAddRecordViewController.m */,
+			);
+			name = Record;
 			sourceTree = "<group>";
 		};
 		F81BE7EBFDFFA97285DAE49D /* Pods */ = {
@@ -304,7 +319,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A55D8131C2A817B00E5EF33 /* ViewController.m in Sources */,
-				8A0877201C7272E500EE3C14 /* JLAddNewRecordViewController.m in Sources */,
+				C008DF441CB9CAF6006CBE73 /* JLAddRecordViewController.m in Sources */,
+				C008DF381CB616A2006CBE73 /* PVTemplateDetailViewController.m in Sources */,
 				8AE27B291CB0825D001E48CF /* JLAddColumnViewController.m in Sources */,
 				8A55D8391C4D9E6900E5EF33 /* UIImage+JLUtil.m in Sources */,
 				8A55D8191C2A817B00E5EF33 /* Jiluben.xcdatamodeld in Sources */,

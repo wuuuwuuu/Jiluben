@@ -9,6 +9,7 @@
 #import "JLStartingViewController.h"
 #import "JLAddTemplateViewController.h"
 #import <Parse/Parse.h>
+#import "PVTemplateDetailViewController.h"
 
 @interface JLStartingViewController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -102,7 +103,18 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // TODO
+    PVTemplateDetailViewController *vc = [[PVTemplateDetailViewController alloc] init];
+    PFObject *pfTemplate = [self.tableData objectAtIndex:indexPath.row];
+    // create template object.
+    
+    JLTemplate *template = [[JLTemplate alloc] init];
+    template.name = [pfTemplate valueForKey:@"name"];//pfTemplate[@"name"];
+    template.entityId = [pfTemplate valueForKey:@"objectId"];
+    template.fields = [pfTemplate valueForKey:@"fields"];//pfTemplate[@"fields"];
+    vc.jlTemplate = template;
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: vc];
+    [self presentViewController:navController animated:YES completion:nil];
 }
 
 @end

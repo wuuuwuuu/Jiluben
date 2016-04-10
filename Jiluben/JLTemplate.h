@@ -11,11 +11,13 @@
 
 @interface JLTemplate : NSObject
 
-@property(nonatomic, strong) NSNumber *entityId;
+@property(nonatomic, strong) NSString *entityId; // objective id on parse.
 
-@property(nonatomic, strong) NSString *name;
+@property(nonatomic, strong) NSString *name; // template name.
 
-@property(nonatomic, strong) NSMutableArray *fields;
+@property(nonatomic, strong) NSMutableArray *fields; // column name and type.
+
+@property(nonatomic, strong) NSMutableArray *records;
 
 - (BOOL)addField:(JTField *)field;
 - (BOOL)removeField:(NSString *)fieldName;

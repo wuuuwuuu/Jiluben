@@ -7,6 +7,7 @@
 //
 
 #import "JLTemplate.h"
+#import <Parse/Parse.h>
 
 @interface JLTemplate()
 
@@ -78,6 +79,22 @@
     }
     
     return YES;
+}
+
+- (NSMutableArray *)records
+{
+    if (_records) {
+        return _records;
+    }
+    // Get records from parse, passing template id as key
+    PFQuery *query = [PFQuery queryWithClassName:@"JLRecord"];
+    [query whereKey:@"templateId" equalTo:self.entityId];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        for (id object in objects) {
+            [_records addObject:object];
+        }
+    }];
+    return _records;
 }
 
 //- (NSMutableArray<NSString *> *)existingFieldNames
