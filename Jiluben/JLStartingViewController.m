@@ -29,7 +29,7 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     // Upper view with a "add template button".
-    self.upperView = [[UIView alloc] initWithFrame:CGRectMake(0.0, 0.0, self.view.frame.size.width, 100.0)];
+    self.upperView = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.navigationController.navigationBar.frame.size.height, self.view.frame.size.width, 100.0)];
     self.upperView.backgroundColor = [UIColor redColor];
     UIButton *addTemplate = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width/2-50, 50-22, 100, 44.0)];
     addTemplate.backgroundColor = [UIColor blueColor];
@@ -38,7 +38,7 @@
     [self.upperView addSubview:addTemplate];
     
     // Lower view with existing templates.
-    self.lowerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.upperView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.upperView.frame.size.height)];
+    self.lowerView = [[UIView alloc] initWithFrame:CGRectMake(0.0, self.upperView.frame.size.height + self.upperView.frame.origin.y, self.view.frame.size.width, self.view.frame.size.height - self.upperView.frame.size.height)];
     self.lowerView.backgroundColor = [UIColor clearColor];
     self.tableView = [[UITableView alloc] initWithFrame:self.lowerView.bounds];
     self.tableView.delegate = self;
@@ -61,8 +61,9 @@
 {
     JLAddTemplateViewController *vc = [[JLAddTemplateViewController alloc] init];
     // Add nav controller and present it.
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: vc];
-    [self presentViewController:navController animated:YES completion:nil];
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: vc];
+//    [self presentViewController:navController animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark Load existing Template
@@ -113,8 +114,9 @@
     template.fields = [pfTemplate valueForKey:@"fields"];//pfTemplate[@"fields"];
     vc.jlTemplate = template;
     
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: vc];
-    [self presentViewController:navController animated:YES completion:nil];
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: vc];
+//    [self presentViewController:navController animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 @end

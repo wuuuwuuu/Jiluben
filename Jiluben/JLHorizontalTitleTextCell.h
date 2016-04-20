@@ -6,8 +6,14 @@
 //  Copyright © 2016 Yue. All rights reserved.
 //
 
-#ifndef JLHorizontalTitleTextCell_h
-#define JLHorizontalTitleTextCell_h
+#import <UIKit/UIKit.h>
 
+@interface JLHorizontalTitleTextCell : UITableViewCell
 
-#endif /* JLHorizontalTitleTextCell_h */
+@property (nonatomic, strong) UILabel* label;
+@property (nonatomic, strong) NSString* labelText;
+
+@property (nonatomic, strong) NSString* text;
+@property (nonatomic, strong) UITextField* textField;
+
+@end

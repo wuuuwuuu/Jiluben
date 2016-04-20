@@ -86,8 +86,7 @@ static NSString *cellIdentifier = @"ReusableJLRecordCell";
     JLAddRecordViewController *vc = [[JLAddRecordViewController alloc] init];
     vc.jlTemplate = self.jlTemplate;
     // Add nav controller and present it.
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: vc];
-    [self presentViewController:navController animated:YES completion:nil];
+    [self.navigationController pushViewController:vc animated:YES];
 }
     
 #pragma mark UITableViewDataSource

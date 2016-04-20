@@ -25,7 +25,10 @@
     
     // Starting point. Root view controller.
     JLStartingViewController *rootVC = [[JLStartingViewController alloc] init];
-    self.window.rootViewController = rootVC;
+//    self.window.rootViewController = rootVC;
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController: rootVC];
+     self.window.rootViewController = navController;
     
     return YES;
 }

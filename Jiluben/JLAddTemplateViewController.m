@@ -90,6 +90,7 @@ typedef enum {
     // Add Column view.
     self.addColumnView = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     self.addColumnView.textLabel.text = @"Add Column";
+    self.addColumnView.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 
     [self.tableView reloadData];
 }

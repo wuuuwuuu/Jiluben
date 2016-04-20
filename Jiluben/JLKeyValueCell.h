@@ -6,8 +6,15 @@
 //  Copyright © 2016 Yue. All rights reserved.
 //
 
-#ifndef JLKeyValueCell_h
-#define JLKeyValueCell_h
 
+#import <UIKit/UIKit.h>
 
-#endif /* JLKeyValueCell_h */
+@interface JLKeyValueCell : UITableViewCell
+
+@property (nonatomic, strong) UILabel *keyLabel;
+@property (nonatomic, strong) NSString *keyLabelText;
+
+@property (nonatomic, strong) UILabel *valueLabel;
+@property (nonatomic, strong) NSString *valueLabelText;
+
+@end

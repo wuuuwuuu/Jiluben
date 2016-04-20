@@ -28,6 +28,13 @@
 		C008DF361CB41ECC006CBE73 /* JLStartingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF351CB41ECC006CBE73 /* JLStartingViewController.m */; };
 		C008DF381CB616A2006CBE73 /* PVTemplateDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF371CB616A2006CBE73 /* PVTemplateDetailViewController.m */; };
 		C008DF441CB9CAF6006CBE73 /* JLAddRecordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF431CB9CAF6006CBE73 /* JLAddRecordViewController.m */; };
+		C008DF481CBCA65E006CBE73 /* JLHorizontalTitleTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF471CBCA65E006CBE73 /* JLHorizontalTitleTextCell.m */; };
+		C008DF4B1CBCA6BE006CBE73 /* JLVerticalTitleTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF4A1CBCA6BE006CBE73 /* JLVerticalTitleTextCell.m */; };
+		C008DF4E1CBD5E22006CBE73 /* JLDateTimeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF4D1CBD5E22006CBE73 /* JLDateTimeCell.m */; };
+		C008DF511CBD5E7C006CBE73 /* JLLabelTextCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C008DF501CBD5E7C006CBE73 /* JLLabelTextCell.m */; };
+		C09DD4341CBE226300F04C9C /* JLAddDetailDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09DD4331CBE226300F04C9C /* JLAddDetailDataViewController.m */; };
+		C09DD4381CBEA97600F04C9C /* JLTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C09DD4371CBEA97600F04C9C /* JLTextFieldCell.m */; };
+		C09DD43A1CBEAEAB00F04C9C /* JLKeyValueCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C09DD4391CBEAEAB00F04C9C /* JLKeyValueCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +78,20 @@
 		C008DF391CB616B8006CBE73 /* PVTemplateDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PVTemplateDetailViewController.h; sourceTree = "<group>"; };
 		C008DF421CB9CAD2006CBE73 /* JLAddRecordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAddRecordViewController.h; sourceTree = "<group>"; };
 		C008DF431CB9CAF6006CBE73 /* JLAddRecordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAddRecordViewController.m; sourceTree = "<group>"; };
+		C008DF461CBCA624006CBE73 /* JLHorizontalTitleTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLHorizontalTitleTextCell.h; sourceTree = "<group>"; };
+		C008DF471CBCA65E006CBE73 /* JLHorizontalTitleTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLHorizontalTitleTextCell.m; sourceTree = "<group>"; };
+		C008DF491CBCA680006CBE73 /* JLVerticalTitleTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLVerticalTitleTextCell.h; sourceTree = "<group>"; };
+		C008DF4A1CBCA6BE006CBE73 /* JLVerticalTitleTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLVerticalTitleTextCell.m; sourceTree = "<group>"; };
+		C008DF4C1CBD5DFC006CBE73 /* JLDateTimeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLDateTimeCell.h; sourceTree = "<group>"; };
+		C008DF4D1CBD5E22006CBE73 /* JLDateTimeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLDateTimeCell.m; sourceTree = "<group>"; };
+		C008DF4F1CBD5E4F006CBE73 /* JLLabelTextCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLLabelTextCell.h; sourceTree = "<group>"; };
+		C008DF501CBD5E7C006CBE73 /* JLLabelTextCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLLabelTextCell.m; sourceTree = "<group>"; };
+		C09DD4331CBE226300F04C9C /* JLAddDetailDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLAddDetailDataViewController.m; sourceTree = "<group>"; };
+		C09DD4351CBE226F00F04C9C /* JLAddDetailDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLAddDetailDataViewController.h; sourceTree = "<group>"; };
+		C09DD4361CBEA96900F04C9C /* JLTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLTextFieldCell.h; sourceTree = "<group>"; };
+		C09DD4371CBEA97600F04C9C /* JLTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLTextFieldCell.m; sourceTree = "<group>"; };
+		C09DD4391CBEAEAB00F04C9C /* JLKeyValueCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JLKeyValueCell.m; sourceTree = "<group>"; };
+		C09DD43B1CBEAEC200F04C9C /* JLKeyValueCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JLKeyValueCell.h; sourceTree = "<group>"; };
 		F4289B660F6F6C4CF3E7EE57 /* Pods-Jiluben.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jiluben.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jiluben/Pods-Jiluben.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,6 +118,18 @@
 				8A0877211C72789300EE3C14 /* JLStyledInputViewCell.m */,
 				8A0877251C727DA300EE3C14 /* JLCons.h */,
 				8A0877261C727DAE00EE3C14 /* JLCons.m */,
+				C008DF461CBCA624006CBE73 /* JLHorizontalTitleTextCell.h */,
+				C008DF471CBCA65E006CBE73 /* JLHorizontalTitleTextCell.m */,
+				C008DF491CBCA680006CBE73 /* JLVerticalTitleTextCell.h */,
+				C008DF4A1CBCA6BE006CBE73 /* JLVerticalTitleTextCell.m */,
+				C008DF4C1CBD5DFC006CBE73 /* JLDateTimeCell.h */,
+				C008DF4D1CBD5E22006CBE73 /* JLDateTimeCell.m */,
+				C008DF4F1CBD5E4F006CBE73 /* JLLabelTextCell.h */,
+				C008DF501CBD5E7C006CBE73 /* JLLabelTextCell.m */,
+				C09DD4361CBEA96900F04C9C /* JLTextFieldCell.h */,
+				C09DD4371CBEA97600F04C9C /* JLTextFieldCell.m */,
+				C09DD4391CBEAEAB00F04C9C /* JLKeyValueCell.m */,
+				C09DD43B1CBEAEC200F04C9C /* JLKeyValueCell.h */,
 			);
 			name = commonUI;
 			sourceTree = "<group>";
@@ -184,6 +217,8 @@
 			children = (
 				C008DF421CB9CAD2006CBE73 /* JLAddRecordViewController.h */,
 				C008DF431CB9CAF6006CBE73 /* JLAddRecordViewController.m */,
+				C09DD4331CBE226300F04C9C /* JLAddDetailDataViewController.m */,
+				C09DD4351CBE226F00F04C9C /* JLAddDetailDataViewController.h */,
 			);
 			name = Record;
 			sourceTree = "<group>";
@@ -319,19 +354,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A55D8131C2A817B00E5EF33 /* ViewController.m in Sources */,
+				C008DF481CBCA65E006CBE73 /* JLHorizontalTitleTextCell.m in Sources */,
 				C008DF441CB9CAF6006CBE73 /* JLAddRecordViewController.m in Sources */,
+				C008DF511CBD5E7C006CBE73 /* JLLabelTextCell.m in Sources */,
 				C008DF381CB616A2006CBE73 /* PVTemplateDetailViewController.m in Sources */,
 				8AE27B291CB0825D001E48CF /* JLAddColumnViewController.m in Sources */,
 				8A55D8391C4D9E6900E5EF33 /* UIImage+JLUtil.m in Sources */,
 				8A55D8191C2A817B00E5EF33 /* Jiluben.xcdatamodeld in Sources */,
 				C008DF361CB41ECC006CBE73 /* JLStartingViewController.m in Sources */,
 				8A0877221C72789300EE3C14 /* JLStyledInputViewCell.m in Sources */,
+				C09DD43A1CBEAEAB00F04C9C /* JLKeyValueCell.m in Sources */,
 				8A55D8101C2A817B00E5EF33 /* AppDelegate.m in Sources */,
+				C09DD4381CBEA97600F04C9C /* JLTextFieldCell.m in Sources */,
+				C008DF4E1CBD5E22006CBE73 /* JLDateTimeCell.m in Sources */,
 				8A55D8261C2B42E300E5EF33 /* JLTemplate.m in Sources */,
 				8A0877291C72A17200EE3C14 /* JLTableView.m in Sources */,
 				8A0877271C727DAE00EE3C14 /* JLCons.m in Sources */,
 				8A55D8351C4D91CA00E5EF33 /* MultiColumnTableCell.m in Sources */,
 				8A55D8291C2B430900E5EF33 /* JLAddTemplateViewController.m in Sources */,
+				C008DF4B1CBCA6BE006CBE73 /* JLVerticalTitleTextCell.m in Sources */,
+				C09DD4341CBE226300F04C9C /* JLAddDetailDataViewController.m in Sources */,
 				8AE27B2C1CB085CA001E48CF /* JLColumnTypeViewController.m in Sources */,
 				8A55D82F1C2B691500E5EF33 /* ParseObject.m in Sources */,
 				8A55D8331C4B166A00E5EF33 /* JTField.m in Sources */,

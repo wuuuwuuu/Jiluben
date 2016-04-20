@@ -10,7 +10,7 @@
 
 @interface JLTextFieldCell : UITableViewCell
 
-@property (nonatomic, strong) NSString* text;
-@property (nonatomic, strong) UITextField* textField;
+@property (nonatomic, strong) NSString *text;
+@property (nonatomic, strong) UITextField *textField;
 
 @end

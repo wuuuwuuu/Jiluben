@@ -6,8 +6,18 @@
 //  Copyright © 2016 Yue. All rights reserved.
 //
 
-#ifndef JLAddDetailDataViewController_h
-#define JLAddDetailDataViewController_h
+#import <UIKit/UIKit.h>
 
+@protocol JLAddDetailDataViewControllerDelegate <NSObject>
 
-#endif /* JLAddDetailDataViewController_h */
+- (void)cellDidaddData:(NSString *)data toRow:(NSInteger)row;
+
+@end
+
+@interface JLAddDetailDataViewController : UIViewController
+
+@property (nonatomic) NSInteger indexPathRow;
+@property (nonatomic, strong) NSString *dataTitle;
+@property (nonatomic, weak) id <JLAddDetailDataViewControllerDelegate> delegate;
+
+@end
